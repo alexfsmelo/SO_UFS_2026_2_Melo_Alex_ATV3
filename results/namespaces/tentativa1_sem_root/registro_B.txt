@@ -1,0 +1,25 @@
+# Registro do conteiner B
+data_utc=2026-11-10T23:32:27Z
+nome=lab3_ns_b_2084
+id=20c16ad4e4b0
+imagem=sha256:5e2bdb1b0d542d5039cffb8181c65930093949194a65c365dfb1b0fe13a4fa5b
+PID_host=2185
+pid1_comm=sleep
+pid1_cmdline=sleep 300 
+ns_pid=pid:[4026532359]
+ns_mnt=mnt:[4026532356]
+ns_net=net:[4026532361]
+ns_uts=uts:[4026532357]
+ns_ipc=ipc:[4026532358]
+ns_cgroup=cgroup:[4026532360]
+hostname_interno=20c16ad4e4b0
+pids_visiveis_dentro=1 62 68 69 70 
+processos_visiveis_dentro:
+  pid=1 comm=sleep
+  pid=71 comm=sh
+interfaces_rede_dentro=lo 
+raiz_do_mount_ns=ponto=/ opcoes=rw,relatime fstype=overlay
+total_mounts_dentro=24
+
+# Visao do host do daemon (somente se /proc/2185 for deste Linux)
+host_local_confirmado=nao (daemon remoto/Docker Desktop: /proc deste terminal nao e o do daemon)

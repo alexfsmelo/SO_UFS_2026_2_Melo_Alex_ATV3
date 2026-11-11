@@ -1,0 +1,42 @@
+registro salvo: /home/claude/repo/SO_UFS_2026_2_Melo_Alex_ATV3/results/namespaces/registro_A.txt
+registro salvo: /home/claude/repo/SO_UFS_2026_2_Melo_Alex_ATV3/results/namespaces/registro_B.txt
+tabela salva: /home/claude/repo/SO_UFS_2026_2_Melo_Alex_ATV3/results/namespaces/namespaces.csv
+recurso,handle_A,handle_B,iguais,handle_terminal
+pid,pid:[4026532267],pid:[4026532323],nao,pid:[4026531836]
+mnt,mnt:[4026532264],mnt:[4026532320],nao,mnt:[4026531832]
+net,net:[4026532268],net:[4026532324],nao,net:[4026531833]
+uts,uts:[4026532265],uts:[4026532321],nao,uts:[4026531838]
+ipc,ipc:[4026532266],ipc:[4026532322],nao,ipc:[4026531839]
+cgroup,cgroup:[4026531835],cgroup:[4026531835],sim,cgroup:[4026531835]
+registro salvo: /home/claude/repo/SO_UFS_2026_2_Melo_Alex_ATV3/results/mount/readonly.txt
+# Parte D: montagem somente leitura e menor privilegio
+data_utc=2026-11-10T16:46:05Z
+seguranca_daemon=[name=seccomp,profile=builtin]
+permissoes_host: drwxr-xr-x 0:0 dados_demo;-rw-r--r-- 0:0 dados_demo/texto.txt;drwxr-xr-x 0:0 dados_demo_rw_controle;
+
+== caso D1_nao_root_ro
+flags: --network none --user 65534:65534 --cap-drop ALL --security-opt no-new-privileges -v <repo>/dados_demo:/dados:ro
+uid=65534 capeff=0000000000000000 no_new_privs=1 seccomp=2
+mountinfo: ponto=/dados opcoes_mount=ro,relatime
+leitura=ok conteudo='Documento sintetico'
+escrita=negada errno=30 EROFS (Read-only file system)
+rc_conteiner=0
+
+== caso D2_root_ro
+flags: --network none (usuario root, capabilities padrao, sem --privileged) -v <repo>/dados_demo:/dados:ro
+uid=0 capeff=00000000a80425fb no_new_privs=0 seccomp=2
+mountinfo: ponto=/dados opcoes_mount=ro,relatime
+leitura=ok conteudo='Documento sintetico'
+escrita=negada errno=30 EROFS (Read-only file system)
+rc_conteiner=0
+
+== caso D3_nao_root_rw_sem_permissao
+flags: --network none --user 65534:65534 --cap-drop ALL --security-opt no-new-privileges -v <repo>/dados_demo_rw_controle:/controle (rw)
+uid=65534 capeff=0000000000000000 no_new_privs=1 seccomp=2
+mountinfo: ponto=/controle opcoes_mount=rw,relatime
+escrita=negada errno=13 EACCES (Permission denied)
+rc_conteiner=0
+
+# Conferencia no host depois dos testes
+conteudo_dados_demo=texto.txt 
+conteudo_controle=

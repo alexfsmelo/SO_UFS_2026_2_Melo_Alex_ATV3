@@ -1,0 +1,63 @@
+# Ambiente da Atividade 3
+data_utc=2026-11-10T23:32:21Z
+
+## Kernel e distribuicao (Linux onde o terminal roda)
+uname=Linux 6.6.114.1-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Mon Dec  1 20:46:23 UTC 2025 x86_64 GNU/Linux
+PRETTY_NAME="Ubuntu 26.04 LTS"
+VERSION_ID="26.04"
+nproc=4
+cpu_modelo=AMD Ryzen 7 7735HS with Radeon Graphics
+ram_total=7.8 GiB
+swap_total=2097152 kB
+
+## Virtualizacao
+flag_hypervisor_cpuinfo=4
+systemd_detect_virt=wsl
+systemd_detect_virt_vm=microsoft
+pid1_do_linux=systemd
+marcador_/.dockerenv=ausente
+dmesg_hypervisor=Hypervisor detected: Microsoft Hyper-V
+wsl=sim (microsoft-standard-WSL2)
+
+## Docker
+docker_cliente=29.1.3 docker_servidor=29.1.3 api=1.52
+compose=indisponivel
+daemon_sistema=Ubuntu 26.04 LTS
+daemon_kernel=6.6.114.1-microsoft-standard-WSL2
+daemon_ncpu=4
+daemon_mem_bytes=8328970240
+Cgroup=2 Driver=systemd
+storage=overlayfs
+runtime_padrao=runc
+seguranca=[name=seccomp,profile=builtin name=cgroupns]
+rootless=
+
+## cgroup visto pelo terminal
+tipo_fs_/sys/fs/cgroup=cgroup2fs
+versao=v2 (unificado)
+controladores_raiz=cpuset cpu io memory hugetlb pids rdma
+subtree_control_raiz=cpuset cpu io memory pids
+ancestral /sys/fs/cgroup/system.slice: cpu.max=max 100000 memory.max=max pids.max=max
+
+## Imagem do laboratorio
+IMAGEM_LAB=python@sha256:5e2bdb1b0d542d5039cffb8181c65930093949194a65c365dfb1b0fe13a4fa5b
+image_id=sha256:5e2bdb1b0d542d5039cffb8181c65930093949194a65c365dfb1b0fe13a4fa5b
+repo_digests=[python@sha256:5e2bdb1b0d542d5039cffb8181c65930093949194a65c365dfb1b0fe13a4fa5b]
+repo_tags=[python:3.12-slim]
+criada=2026-11-05T08:00:30.329058258Z
+tamanho_bytes=43286505
+comentario=buildkit.dockerfile.v0
+python_na_imagem=3.12.16
+os_na_imagem=Debian GNU/Linux 13 (trixie)
+kernel_visto_dentro_do_conteiner=6.6.114.1-microsoft-standard-WSL2
+kernel_visto_no_terminal=6.6.114.1-microsoft-standard-WSL2
+
+## Codigo
+commit=sem-git
+sha256 carga_cpu.py=2890b4c8bab1bfbeec94ca32b2763de2fa2d88a4f1675e963f5ad2a439d31874
+sha256 resumo.py=855038523dd3ccaae6d53117d3f863b13a9ac9884ff491014d4e232615bbbac4
+sha256 validar.py=214144f421abf2e3ff4415c2f8055c56fe2d14965357f11b778492e0ab95c211
+sha256 ambiente.sh=9c2f7b5d83b851442815541fe48dc797cbb51fe2978844a0138d3f22b8417407
+sha256 construir_imagem.sh=f08234b4624e5916649d080a4ef56c48841f8fb501401379ae7a4f763999a231
+sha256 evidencia_ns_mount.sh=c8e4842917377c8b58b4faaa355f3139b6b2fc55209a137f8829c3bb494df89f
+sha256 run_experimentos.sh=0994d3ffa65ebbebd7d5ad1330c8e21674dd6705ec24118ce589b593e6c13062

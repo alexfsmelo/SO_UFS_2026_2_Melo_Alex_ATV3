@@ -1,0 +1,1 @@
+NanoCpus=1000000000 CpuQuota=0 CpuPeriod=0 Memory=268435456 MemorySwap=268435456 PidsLimit=64 User=65534:65534 CapDrop=[ALL] SecurityOpt=[no-new-privileges] NetworkMode=none ExitCode=0 OOMKilled=false Image=sha256:5e2bdb1b0d542d5039cffb8181c65930093949194a65c365dfb1b0fe13a4fa5b

@@ -1,0 +1,3 @@
+ordem,condicao,rep,tentativa,cpus,iteracoes,rc,inicio_utc,fim_utc,arquivo
+1,C1,1,1,0.5,2000000,0,2026-11-10T23:32:31Z,2026-11-10T23:32:33Z,C1_r1_t1.json
+2,C2,1,1,1.0,2000000,0,2026-11-10T23:32:33Z,2026-11-10T23:32:34Z,C2_r1_t1.json

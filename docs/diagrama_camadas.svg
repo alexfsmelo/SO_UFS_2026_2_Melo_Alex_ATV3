@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="720" viewBox="0 0 1100 720" font-family="DejaVu Sans, Arial, sans-serif">
+  <rect width="1100" height="720" fill="#ffffff"/>
+  <text x="40" y="44" font-size="24" font-weight="bold" fill="#0b0b0b">Camadas do ambiente onde as medições rodaram</text>
+  <text x="40" y="72" font-size="14" fill="#52514e">Um único kernel Linux (o da VM do WSL2) é compartilhado por todos os contêineres. Não há VM por contêiner.</text>
+
+  <!-- hardware -->
+  <rect x="40" y="640" width="1020" height="52" rx="6" fill="#e4e3df"/>
+  <text x="60" y="671" font-size="16" font-weight="bold" fill="#0b0b0b">Notebook do discente</text>
+  <text x="300" y="671" font-size="14" fill="#52514e">AMD Ryzen 7 7735HS (8 núcleos, 16 threads), 16 GB de RAM instalada</text>
+
+  <!-- windows + hyper-v -->
+  <rect x="40" y="576" width="1020" height="52" rx="6" fill="#d6d5cf"/>
+  <text x="60" y="607" font-size="16" font-weight="bold" fill="#0b0b0b">Windows 11 + hipervisor Hyper-V</text>
+  <text x="400" y="607" font-size="14" fill="#52514e">evidência: "Hypervisor detected: Microsoft Hyper-V" e flag hypervisor no cpuinfo</text>
+
+  <!-- VM boundary -->
+  <rect x="40" y="96" width="1020" height="468" rx="10" fill="none" stroke="#52514e" stroke-width="2" stroke-dasharray="8 6"/>
+  <text x="60" y="124" font-size="15" font-weight="bold" fill="#52514e">VM leve do WSL2: 4 vCPUs, 7,8 GiB de RAM, 2 GiB de swap</text>
+  <text x="60" y="142" font-size="12" fill="#52514e">Imagem de todos os contêineres: python:3.12-slim (Debian 13, Python 3.12.16), fixada por sha256:5e2bdb1b0d54...</text>
+
+  <!-- kernel -->
+  <rect x="60" y="488" width="980" height="60" rx="6" fill="#0b0b0b"/>
+  <text x="80" y="515" font-size="17" font-weight="bold" fill="#ffffff">Kernel Linux 6.6.114.1-microsoft-standard-WSL2 (compartilhado)</text>
+  <text x="80" y="537" font-size="13" fill="#e4e3df">namespaces pid, mnt, net, uts, ipc e cgroup; cgroup v2 com cpu, memory e pids; seccomp</text>
+
+  <!-- userspace + docker -->
+  <rect x="60" y="410" width="980" height="64" rx="6" fill="#ffffff" stroke="#c3c2b7"/>
+  <text x="80" y="437" font-size="15" font-weight="bold" fill="#0b0b0b">Ubuntu 26.04 LTS (systemd) + Docker Engine 29.1.3, no próprio WSL2</text>
+  <text x="80" y="459" font-size="13" fill="#52514e">dockerd, containerd e runc; driver de cgroup systemd; storage overlayfs; terminal e daemon no mesmo Linux</text>
+
+  <!-- containers -->
+  <g font-size="13">
+    <rect x="60" y="160" width="225" height="230" rx="8" fill="#ffffff" stroke="#2a78d6" stroke-width="2"/>
+    <text x="76" y="186" font-size="15" font-weight="bold" fill="#0b0b0b">Contêiner A (Parte B)</text>
+    <text x="76" y="212" fill="#52514e">PID 1 interno: sleep</text>
+    <text x="76" y="234" fill="#0b0b0b">namespaces próprios de</text>
+    <text x="76" y="254" fill="#0b0b0b">pid, mnt, net, uts, ipc</text>
+    <text x="76" y="274" fill="#0b0b0b">e cgroup</text>
+    <text x="76" y="300" fill="#52514e">rede: só lo (--network none)</text>
+    <text x="76" y="320" fill="#52514e">raiz: overlay própria</text>
+
+    <rect x="305" y="160" width="225" height="230" rx="8" fill="#ffffff" stroke="#2a78d6" stroke-width="2"/>
+    <text x="321" y="186" font-size="15" font-weight="bold" fill="#0b0b0b">Contêiner B (Parte B)</text>
+    <text x="321" y="212" fill="#52514e">PID 1 interno: sleep</text>
+    <text x="321" y="234" fill="#0b0b0b">namespaces próprios,</text>
+    <text x="321" y="254" fill="#0b0b0b">diferentes dos de A</text>
+    <text x="321" y="274" fill="#0b0b0b">e dos do host</text>
+    <text x="321" y="300" fill="#52514e">rede: só lo (--network none)</text>
+    <text x="321" y="320" fill="#52514e">raiz: overlay própria</text>
+
+    <rect x="550" y="160" width="235" height="230" rx="8" fill="#ffffff" stroke="#eb6834" stroke-width="2"/>
+    <text x="566" y="186" font-size="15" font-weight="bold" fill="#0b0b0b">C1 e C2 (Parte C)</text>
+    <text x="566" y="210" fill="#52514e">python3 carga_cpu.py</text>
+    <text x="566" y="234" fill="#0b0b0b">C1: cpu.max 50000 100000</text>
+    <text x="566" y="254" fill="#0b0b0b">C2: cpu.max 100000 100000</text>
+    <text x="566" y="278" fill="#52514e">memory.max 256 MiB</text>
+    <text x="566" y="298" fill="#52514e">memory.swap.max 0</text>
+    <text x="566" y="318" fill="#52514e">pids.max 64</text>
+    <text x="566" y="342" fill="#52514e">uid 65534, sem capabilities,</text>
+    <text x="566" y="362" fill="#52514e">no-new-privileges</text>
+
+    <rect x="805" y="160" width="235" height="230" rx="8" fill="#ffffff" stroke="#52514e" stroke-width="2"/>
+    <text x="821" y="186" font-size="14" font-weight="bold" fill="#0b0b0b">Teste read-only (Parte D)</text>
+    <text x="821" y="210" fill="#52514e">dados_demo em /dados:ro</text>
+    <text x="821" y="234" fill="#0b0b0b">leitura: ok</text>
+    <text x="821" y="254" fill="#0b0b0b">escrita: EROFS</text>
+    <text x="821" y="278" fill="#52514e">controle rw sem permissão:</text>
+    <text x="821" y="298" fill="#0b0b0b">escrita: EACCES</text>
+    <text x="821" y="322" fill="#52514e">uid 65534, CapEff = 0</text>
+  </g>
+</svg>

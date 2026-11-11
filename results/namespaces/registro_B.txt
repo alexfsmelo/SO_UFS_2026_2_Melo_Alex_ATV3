@@ -1,0 +1,30 @@
+# Registro do conteiner B
+data_utc=2026-11-10T23:36:42Z
+nome=lab3_ns_b_4367
+id=5be50e6821dd
+imagem=sha256:5e2bdb1b0d542d5039cffb8181c65930093949194a65c365dfb1b0fe13a4fa5b
+PID_host=4476
+pid1_comm=sleep
+pid1_cmdline=sleep 300 
+ns_pid=pid:[4026532361]
+ns_mnt=mnt:[4026532358]
+ns_net=net:[4026532363]
+ns_uts=uts:[4026532359]
+ns_ipc=ipc:[4026532360]
+ns_cgroup=cgroup:[4026532362]
+hostname_interno=5be50e6821dd
+pids_visiveis_dentro=1 64 70 71 72 
+processos_visiveis_dentro:
+  pid=1 comm=sleep
+  pid=73 comm=sh
+interfaces_rede_dentro=lo 
+raiz_do_mount_ns=ponto=/ opcoes=rw,relatime fstype=overlay
+total_mounts_dentro=24
+
+# Visao do host do daemon (somente se /proc/4476 for deste Linux)
+host_local_confirmado=sim
+host_comm_de_PID_host=sleep
+host_NSpid=4476 1
+host_ns_pid_de_PID_host=pid:[4026532361]
+host_ns_mnt_de_PID_host=mnt:[4026532358]
+host_ns_net_de_PID_host=net:[4026532363]

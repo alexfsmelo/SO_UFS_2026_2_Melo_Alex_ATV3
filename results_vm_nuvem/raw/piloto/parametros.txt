@@ -1,0 +1,22 @@
+data_utc=2026-11-10T16:42:04Z
+imagem=sha256:bb511b379932eda4832069ab11c4335b46f091585f05fa212a2095135d3c0ec4
+imagem_id=sha256:bb511b379932eda4832069ab11c4335b46f091585f05fa212a2095135d3c0ec4
+iteracoes=2000000
+reps=1
+ordem=C1:1 C2:1
+memoria=256m memoria_swap=256m pids=64 usuario=65534:65534
+rede=none cap_drop=ALL no_new_privileges=true
+timeout_interno_s=60 timeout_host_s=90 gnu_timeout=1
+carga_sha256=2890b4c8bab1bfbeec94ca32b2763de2fa2d88a4f1675e963f5ad2a439d31874
+commit=sem-git
+data_utc=2026-11-10T16:42:49Z
+imagem=sha256:a817953c8b629740b44a6b889623e537c7c6bd73d8f7c623f6881334db54c34a
+imagem_id=sha256:a817953c8b629740b44a6b889623e537c7c6bd73d8f7c623f6881334db54c34a
+iteracoes=2000000
+reps=1
+ordem=C1:1 C2:1
+memoria=256m memoria_swap=256m pids=64 usuario=65534:65534
+rede=none cap_drop=ALL no_new_privileges=true
+timeout_interno_s=60 timeout_host_s=90 gnu_timeout=1
+carga_sha256=2890b4c8bab1bfbeec94ca32b2763de2fa2d88a4f1675e963f5ad2a439d31874
+commit=sem-git

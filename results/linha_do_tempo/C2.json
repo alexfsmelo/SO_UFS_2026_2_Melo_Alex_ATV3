@@ -1,0 +1,20 @@
+{
+ "condicao": "C2",
+ "cpus": "1.0",
+ "n": 40000000,
+ "intervalo_s": 0.02,
+ "imagem": "python@sha256:5e2bdb1b0d542d5039cffb8181c65930093949194a65c365dfb1b0fe13a4fa5b",
+ "cgroup": {
+  "versao": 2,
+  "dir": "/sys/fs/cgroup/system.slice/docker-e91253e89b9f3f69ba90616701463723daec6606984e062ba10564f22ccbc3cd.scope"
+ },
+ "cpu_max_lido_no_host": "100000 100000",
+ "amostras": 738,
+ "carga": {
+  "status": "ok",
+  "checksum": "098953c3ffd76aa3",
+  "wall_s": 14.925775,
+  "cpu_proc_s": 14.924647,
+  "trabalho_por_s": 2679927.8
+ }
+}

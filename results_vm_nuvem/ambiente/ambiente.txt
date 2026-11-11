@@ -1,0 +1,75 @@
+# Ambiente da Atividade 3
+data_utc=2026-11-10T23:11:10Z
+
+## Kernel e distribuicao (Linux onde o terminal roda)
+uname=Linux 6.18.44-fc-v338 #1 SMP @0 x86_64 GNU/Linux
+PRETTY_NAME="Ubuntu 24.04.5 LTS"
+VERSION_ID="24.04"
+nproc=2
+cpu_modelo=Intel(R) Xeon(R) Processor @ 2.10GHz
+ram_total=7.8 GiB
+swap_total=0 kB
+
+## Virtualizacao
+flag_hypervisor_cpuinfo=2
+systemd_detect_virt=docker
+systemd_detect_virt_vm=kvm
+pid1_do_linux=process_api
+marcador_/.dockerenv=ausente
+dmesg_hypervisor=Hypervisor detected: KVM
+wsl=nao
+vmm=Firecracker (citado na linha de comando do kernel)
+
+## Docker
+docker_cliente=29.9.2 docker_servidor=
+Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
+compose=5.7.0
+daemon_sistema=
+daemon_kernel=
+daemon_ncpu=0
+daemon_mem_bytes=0
+Cgroup= Driver=
+storage=
+runtime_padrao=
+seguranca=[]
+rootless=
+Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
+
+## cgroup visto pelo terminal
+tipo_fs_/sys/fs/cgroup=tmpfs
+versao=v1 (hierarquias separadas por controlador; /sys/fs/cgroup/unified existe=sim)
+hierarquias_v1:
+  cpuset (hierarquia 3)
+  cpu (hierarquia 1)
+  cpuacct (hierarquia 2)
+  blkio (hierarquia 7)
+  memory (hierarquia 4)
+  devices (hierarquia 5)
+  freezer (hierarquia 6)
+  net_cls (hierarquia 0)
+  perf_event (hierarquia 0)
+  net_prio (hierarquia 0)
+  hugetlb (hierarquia 0)
+  pids (hierarquia 8)
+ancestral /sys/fs/cgroup/cpu: cpu.cfs_quota_us=-1 cpu.cfs_period_us=100000
+ancestral /sys/fs/cgroup/memory: memory.limit_in_bytes=9223372036854771712 memsw=9223372036854771712
+ancestral /sys/fs/cgroup/pids: pids.max=raiz-sem-limite
+
+## Imagem do laboratorio
+IMAGEM_LAB=sha256:a817953c8b629740b44a6b889623e537c7c6bd73d8f7c623f6881334db54c34a
+
+Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
+python_na_imagem=Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
+os_na_imagem=Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
+kernel_visto_dentro_do_conteiner=Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
+kernel_visto_no_terminal=6.18.44-fc-v338
+
+## Codigo
+commit=sem-git
+sha256 carga_cpu.py=2890b4c8bab1bfbeec94ca32b2763de2fa2d88a4f1675e963f5ad2a439d31874
+sha256 resumo.py=855038523dd3ccaae6d53117d3f863b13a9ac9884ff491014d4e232615bbbac4
+sha256 validar.py=214144f421abf2e3ff4415c2f8055c56fe2d14965357f11b778492e0ab95c211
+sha256 ambiente.sh=9c2f7b5d83b851442815541fe48dc797cbb51fe2978844a0138d3f22b8417407
+sha256 construir_imagem.sh=f08234b4624e5916649d080a4ef56c48841f8fb501401379ae7a4f763999a231
+sha256 evidencia_ns_mount.sh=c8e4842917377c8b58b4faaa355f3139b6b2fc55209a137f8829c3bb494df89f
+sha256 run_experimentos.sh=0994d3ffa65ebbebd7d5ad1330c8e21674dd6705ec24118ce589b593e6c13062

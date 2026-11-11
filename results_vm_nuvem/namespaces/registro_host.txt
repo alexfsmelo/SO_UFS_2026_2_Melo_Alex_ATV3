@@ -1,0 +1,9 @@
+# Handles do processo do terminal (host do daemon quando local)
+ns_pid=pid:[4026531836]
+ns_mnt=mnt:[4026531832]
+ns_net=net:[4026531833]
+ns_uts=uts:[4026531838]
+ns_ipc=ipc:[4026531839]
+ns_cgroup=cgroup:[4026531835]
+interfaces_rede_host=lo ifb0 ifb1 eth0 docker0 
+processos_visiveis_host=74

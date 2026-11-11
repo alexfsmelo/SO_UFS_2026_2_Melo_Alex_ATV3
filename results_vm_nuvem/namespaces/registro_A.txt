@@ -1,0 +1,30 @@
+# Registro do conteiner A
+data_utc=2026-11-10T16:46:02Z
+nome=lab3_ns_a_8736
+id=88bfa9d9f0c7
+imagem=sha256:a817953c8b629740b44a6b889623e537c7c6bd73d8f7c623f6881334db54c34a
+PID_host=8781
+pid1_comm=sleep
+pid1_cmdline=sleep 300 
+ns_pid=pid:[4026532267]
+ns_mnt=mnt:[4026532264]
+ns_net=net:[4026532268]
+ns_uts=uts:[4026532265]
+ns_ipc=ipc:[4026532266]
+ns_cgroup=cgroup:[4026531835]
+hostname_interno=88bfa9d9f0c7
+pids_visiveis_dentro=1 65 71 72 73 
+processos_visiveis_dentro:
+  pid=1 comm=sleep
+  pid=74 comm=sh
+interfaces_rede_dentro=lo 
+raiz_do_mount_ns=ponto=/ opcoes=rw,relatime fstype=overlay
+total_mounts_dentro=29
+
+# Visao do host do daemon (somente se /proc/8781 for deste Linux)
+host_local_confirmado=sim
+host_comm_de_PID_host=sleep
+host_NSpid=8781 1
+host_ns_pid_de_PID_host=pid:[4026532267]
+host_ns_mnt_de_PID_host=mnt:[4026532264]
+host_ns_net_de_PID_host=net:[4026532268]

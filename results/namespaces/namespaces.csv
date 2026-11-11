@@ -1,0 +1,7 @@
+recurso,handle_A,handle_B,iguais,handle_terminal
+pid,pid:[4026532297],pid:[4026532361],nao,pid:[4026532219]
+mnt,mnt:[4026532294],mnt:[4026532358],nao,mnt:[4026532217]
+net,net:[4026532299],net:[4026532363],nao,net:[4026531840]
+uts,uts:[4026532295],uts:[4026532359],nao,uts:[4026532218]
+ipc,ipc:[4026532296],ipc:[4026532360],nao,ipc:[4026532206]
+cgroup,cgroup:[4026532298],cgroup:[4026532362],nao,cgroup:[4026531835]

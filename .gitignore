@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.venv/
+.env
+rootfs/
+rootfs.tar
+*.mp4
+*.mov
+dados_demo/novo.txt
+dados_demo_rw_controle/novo.txt
+~$*

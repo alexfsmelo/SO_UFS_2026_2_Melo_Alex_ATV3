@@ -1,0 +1,11 @@
+data_utc=2026-11-10T23:32:34Z
+imagem=python@sha256:5e2bdb1b0d542d5039cffb8181c65930093949194a65c365dfb1b0fe13a4fa5b
+imagem_id=sha256:5e2bdb1b0d542d5039cffb8181c65930093949194a65c365dfb1b0fe13a4fa5b
+iteracoes=40000000
+reps=3
+ordem=C1:1 C2:1 C2:2 C1:2 C1:3 C2:3
+memoria=256m memoria_swap=256m pids=64 usuario=65534:65534
+rede=none cap_drop=ALL no_new_privileges=true
+timeout_interno_s=60 timeout_host_s=90 gnu_timeout=1
+carga_sha256=2890b4c8bab1bfbeec94ca32b2763de2fa2d88a4f1675e963f5ad2a439d31874
+commit=sem-git
